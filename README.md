@@ -15,6 +15,21 @@ docker-compose up
 
 ```
 
+for use puppeteer module with docker container you need to add args to puppeteer launch:
+```
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+    ],
+```
+
+you can add wait until param when you calling page.goto function example :
+
+```
+await page.goto(url, {waitUntil: 'networkidle2'});
+```
+
+
 
 ### Prerequisites
 
